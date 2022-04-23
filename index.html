@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Square+Peg&display=swap" rel="stylesheet">
+    <title>Document</title>
+
+    <style>
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Shadows Into Light', cursive;
+}
+header
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo
+{
+  color: #03a9f4;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.toggle
+{
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: url(https://i.ibb.co/HrfVRcx/menu.png);
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+  cursor: pointer;
+}
+.toggle.active
+{
+  background: url(https://i.ibb.co/rt3HybH/close.png);
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: center;
+  cursor: pointer;
+}
+.showcase
+{
+  position: absolute;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+  transition: 0.5s;
+  z-index: 2;
+}
+.showcase.active
+{
+  right: 300px;
+}
+
+/*.showcase video
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}*/
+.overlay
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  mix-blend-mode: overlay;
+}
+.text
+{
+  position: relative;
+  z-index: auto;
+  display: inline;
+  
+}
+
+.text h2
+{
+  font-size: 5em;
+  font-weight: 800;
+  color: #03a9f4;
+  line-height: 1em;
+  
+}
+.text h3
+{
+  font-size: 4em;
+  font-weight: 700;
+  color: #03a9f4;
+  line-height: 1em;
+  
+}
+
+.text h4
+{
+  font-size: 2em;
+  font-weight: 700;
+  color: #03a9f4;
+  line-height: 1em;
+  
+}
+.text p
+{
+  font-size: 1.1em;
+  color: #03a9f4;
+  margin: 20px 0;
+  font-weight: 400;
+  max-width: 700px;
+}
+.text a
+{
+  display: inline-block;
+  font-size: 1em;
+  
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+.text a:hover
+{
+  letter-spacing: 6px;
+  transform: scale(1.5);
+}
+.social
+{
+  position: absolute;
+  z-index: 10;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social li
+{
+  list-style: none;
+}
+.social li a
+{
+  display: inline-block;
+  margin-right: 20px;
+  filter: invert(1);
+  transform: scale(0.5);
+  transition: 0.5s;
+}
+.social li a:hover
+{
+  transform: scale(0.5) translateY(-15px);
+}
+.menu
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu ul
+{
+  position: relative;
+}
+.menu ul li
+{
+  list-style: none;
+}
+.menu ul li a
+{
+  text-decoration: none;
+  font-size: 24px;
+  color: #111;
+}
+.menu ul li a:hover
+{
+  color: #03a9f4; 
+}
+
+@media (max-width: 991px)
+{
+  .showcase,
+  .showcase header
+  {
+    padding: 40px;
+  }
+  .text h2
+  {
+    font-size: 3em;
+  }
+  .text h3
+  {
+    font-size: 2em;
+  }
+}
+
+    </style>
+</head>
+
+<body>
+    <section class="showcase" id="about">
+        <header>
+          <h2 class="logo"><code>< CL/></code></h2>
+          <div class="toggle" style="color: #03a9f4"></div>
+        </header>
+        
+        <div class="text">
+          <h3>Hey, Im Chris Link </h3> 
+          <br></br>
+          <h4>Jr. Front End Web Developer</h4>
+          <img src="unnamed.jpg" height="300px" width="300px">
+          <p>I am a jr. front end web developer based in Richmond, Virginia. I found web development in early 2022 while searching for a creative outlet that I could <code>transform:</code> into a professional career. I have always been involved in the creative arts, whether through sketching and painting, in music through writing songs and performing, as well as playing the drums and piano. When I stumbled across front end web development, I was hooked ASAP!</p>
+          <p>I first began studying web development on Udemy, taking a course in foundational HTML5 and CSS. I then signed up for a bootcamp with Vets in Tech for Front End Web Development, while simultaneously completing the Responsive Web Development certification with freecodecamp.org. I am working on two additional Udemy courses, one of which is in Front End Development and another specific to JavaScript, while also utilizing freecodecamp.org and CodeAcademy to improve my skills in JavaScript. I am slated to begin an immersive Full Stack Development bootcamp with TEKsystems on May 9, 2022 which will last for 12 weeks and upon completion of the bootcamp be offered the opportunity to work as a Jr. Developer for TEKsystems.</p>
+          <p>I want to thank Vets in Tech and <a href="https://www.draftkings.com/" target="_blank"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.thedfsguys.com%2Fwp-content%2Fuploads%2F2016%2F06%2FDraftKings-Review-1.png&f=1&nofb=1" height="75px" width="150px"></a> for kickstarting my transition into tech into the development space!</p>
+          
+          
+        </div></section>
+        
+      
+      <div class="menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="mockup-project-technologies.html">Technologies</a></li>
+          <li><a href="mockup-project-projects.html">Projects</a></li>
+          <li><a href="mockup-project-contact.html">Hit Me Up</a></li>
+        </ul>
+      </div>
+
+      <script>
+ const menuToggle = document.querySelector('.toggle');
+      const showcase = document.querySelector('.showcase');
+
+      menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        showcase.classList.toggle('active');
+      })
+
+      </script>
+</body>
+</html>
